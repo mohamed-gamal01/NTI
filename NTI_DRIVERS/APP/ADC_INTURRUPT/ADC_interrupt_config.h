@@ -1,0 +1,78 @@
+/****************************************************************/
+/*   Author             :    Mohamed Gamal 				    */
+/*	 Date 				:    25 January 2023 						*/
+/*	 Version 			:    1.0V 							 	*/
+/*	 Description 		:    Configure Sense Mode [config.h] 	*/
+/****************************************************************/
+
+
+
+/****************************************************************/
+/* Description   : Guard to protect this File from include more */
+/*                 than one time .                              */
+/****************************************************************/
+#ifndef _ADC_CONFIG_H
+#define _ADC_CONFIG_H
+
+
+/****************************************************************/
+/** !comment : Please Enter the Voltage Reference				*/
+/** 		   VOLTAGE_REFERENCE can be : 						*/
+/*					    					AREF 				*/
+/*						    				AVCC 				*/
+/*							    			INTERNAL			*/	
+/****************************************************************/
+
+#define VOLTAGE_REFERENCE			AVCC
+
+#include "dio.h"
+
+/****************************************************************/
+/** !comment : Please Enter the ADJUSTMENT						*/
+/** 		   ADJUSTMENT can be : 								*/
+/*					    					RIGHT_ADJUSTMENT	*/
+/*							    			LEFT_ADJUSTMENT		*/	
+/****************************************************************/
+/****************************************************************/
+/** NOTE	 : The preferred adjustment for a 8 bits Resolution	*/
+/*				is LEFT_ADJUSTMENT and for a 10 bits Resolution	*/
+/*				is RIGHT_ADJUSTMENT								*/
+/****************************************************************/
+
+#define ADJUSTMENT				LEFT_ADJUSTMENT
+
+
+/****************************************************************/
+/** !comment : Please Enter the Voltage Reference				*/
+/** 		   VOLTAGE_REFERENCE can be : 						*/
+/*					    					AVCC 				*/
+/*						    				AREF 				*/
+/*							    			INTERNAL			*/	
+/****************************************************************/
+
+#define ADC_CHANNEL_NUMBER		DIO_PIN1
+
+/****************************************************************/
+/** !comment : Please Enter the Voltage Reference				*/
+/** 		   VOLTAGE_REFERENCE can be : 						*/
+/*					    					AVCC 				*/
+/*						    				AREF 				*/
+/*							    			INTERNAL			*/	
+/****************************************************************/
+
+#define ADC_AUTO_TRIGGER_SOURCE		FREE_RUNNING_MODE
+
+/****************************************************************/
+/** !comment : Please Enter the Voltage Reference				*/
+/** 		   VOLTAGE_REFERENCE can be : 						*/
+/*					    					AVCC 				*/
+/*						    				AREF 				*/
+/*							    			INTERNAL			*/	
+/****************************************************************/
+
+#define ADC_PRESCALLER				DIVID_BY_128
+
+
+
+
+#endif	/**!comment : End of the guard [_ADC_CONFIG_H]		   **/
